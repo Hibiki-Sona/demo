@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Book</title>
+</head>
+<body>
+<h1>新規購入本</h1>
+<form th:action="@{/books/save}" th:method="post">
+    <label>カテゴリー</label>
+    <select name="category">
+        <option>小説</option>
+        <option>マンガ</option>
+        <option>雑誌</option>
+        <option>参考書</option>
+        <option>自己啓発</option>
+        <option>楽譜</option>
+        <option>アート</option>
+        <option>その他</option>
+    </select>
+    <label>タイトル</label>
+    <input type="text" name="title" />
+    <label>何巻まで購入したか</label>
+    <input type="number" name="number" />
+    <input type="submit" value="登録"/>
+</form>
+</body>
+</html>
